@@ -1,0 +1,31 @@
+﻿variable,descripcion
+cpro,Código INE de provincia (clave)
+año,Año (clave)
+provincia,Nombre de provincia
+ccaa,Comunidad autónoma
+alquiler_mediano,Alquiler mediano mensual €/mes (SERPAVI) — dependiente
+alquiler_m2,Alquiler mediano €/m²·mes
+superficie_m2,Superficie mediana m²
+n_contratos,Nº de contratos
+neto_mes_18_25,Salario neto mensual 18-25 (€)
+neto_mes_26_35,Salario neto mensual 26-35 (€) — denominador KPI
+neto_mes_36_45,Salario neto mensual 36-45 (€)
+neto_mes_18_34,Salario neto mensual 18-34 ponderado (€)
+sal_26_35,"Salario bruto anual 26-35 (€, AEAT)"
+paro_total,Tasa de paro total provincial (%)
+factor_2020,Factor de deflactación a € de 2020
+smi_mes,SMI mensual nacional (€)
+tasa_esfuerzo,KPI: alquiler/salario neto 26-35 (%)
+tasa_esfuerzo_18_25,Esfuerzo 18-25 (%)
+tasa_esfuerzo_36_45,Esfuerzo 36-45 (%)
+tasa_esfuerzo_18_34,Esfuerzo 18-34 (%)
+sobre_30,1 si esfuerzo>30% (umbral asequibilidad)
+alquiler_real,Alquiler en € constantes 2020
+salario_real_26_35,Salario neto real 26-35 (€ 2020)
+D_2021,Dummy ruptura base EPA (1 si año≥2021)
+alquiler_mediano_lag1,Alquiler mediano del año anterior (€/mes)
+neto_mes_26_35_lag1,Salario neto 26-35 del año anterior (€)
+paro_total_lag1,Tasa de paro total del año anterior (%)
+tasa_esfuerzo_lag1,Tasa de esfuerzo (26-35) del año anterior (%)
+var_alquiler_pct,Variación interanual del alquiler (%)
+var_salario_pct,Variación interanual del salario neto 26-35 (%)
