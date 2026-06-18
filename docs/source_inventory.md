@@ -1,6 +1,6 @@
 # Inventario de fuentes
 
-Siete fuentes oficiales del panel + una complementaria. Todas se validan al arranque del cuaderno (existencia del archivo) y se auditan en bruto (forma y valores no nulos).
+Siete fuentes oficiales (cinco que forman el panel y dos reservadas para validación y narrativa) más una complementaria. Todas se validan al arranque del cuaderno (existencia del archivo) y se auditan en bruto (forma y valores no nulos).
 
 | # | Fuente | Organismo | Referencia | Forma en bruto | Rol |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@ Siete fuentes oficiales del panel + una complementaria. Todas se validan al arra
 | 5 | Salario mínimo interprofesional | Min. de Trabajo | Serie histórica SMI | 61 × 10 | Panel — contexto |
 | 6 | EAES — salario por edad y CC. AA. | INE | Tabla 28201 | 1.978 × 4 | Validación del salario |
 | 7 | EPA — paro por edad y CC. AA. | INE | Tabla 65334 | 80 × 680 | Narrativa (paro juvenil) |
-| 8 | Padrón continuo — población 18–34 | INE | Cifras de población por provincia | 21.691 × 76 | Complementaria — impacto humano |
+| 8 | Padrón continuo — población 18–34 | INE | Cifras de población por provincia | 21.691 × 76 | Complementaria de impacto humano |
 
 ## Fuentes inspeccionadas y descartadas
 

@@ -10,17 +10,17 @@ Análisis del desequilibrio entre el precio del alquiler y el salario de la pobl
 
 ## Estructura del repositorio
 
-El TFG se compone de **cuatro entregas**: los tres pilares con nota y, después, la memoria completa (≈ 50 páginas) que las integra. Cada pilar tiene su carpeta para que el corrector localice su parte rápido.
+El TFG se compone de **cuatro entregas**: los tres pilares con nota y, después, la memoria completa que las integra. Cada pilar tiene su carpeta para que el corrector localice su parte rápido.
 
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | [`1_Ingenieria_del_Dato/`](1_Ingenieria_del_Dato/) | Construcción del panel provincial integrado y reproducible | ✅ Completada |
-| [`2_Analisis_del_Dato/`](2_Analisis_del_Dato/) | Modelado explicativo, agrupación y predicción | 🚧 En preparación |
-| [`3_Analisis_de_Negocio/`](3_Analisis_de_Negocio/) | Lectura de negocio e implicaciones | 🚧 En preparación |
-| [`memoria_final/`](memoria_final/) | Memoria completa que resume los tres pilares | 🚧 En preparación |
+| [`2_Analisis_del_Dato/`](2_Analisis_del_Dato/) | Modelado explicativo, agrupación y predicción | ✅ Completada |
+| [`3_Analisis_de_Negocio/`](3_Analisis_de_Negocio/) | Lectura de negocio e implicaciones | ✅ Completada |
+| [`memoria_final/`](memoria_final/) | Memoria completa que integra los tres pilares | ✅ Completada |
 | [`docs/`](docs/) | Documentación metodológica: historial de decisiones, diccionario de variables e inventario de fuentes | ✅ Actualizada |
 
-Dentro de cada carpeta de entrega se mantiene la misma organización: `notebooks/`, `data/` (`raw` y `clean`), `figuras/` y `memoria/`.
+Dentro de cada carpeta de entrega se mantiene la misma organización (`notebooks/`, `data/` con `raw` y `clean`, `figuras/` y `memoria/`); el pilar de Análisis de Negocio, al ser de redacción y no incorporar cuaderno ni datos propios, incluye `memoria/` y `tablas/` (tres tablas de elaboración propia: síntesis de objetivos, matriz de decisión 2×2 y ficha del producto).
 
 ## Datos y fuentes
 
@@ -37,7 +37,7 @@ El panel se construye a partir de **siete fuentes oficiales** de cuatro organism
 | 7 | EPA por edad (t=65334) | INE | Narrativa (paro juvenil) |
 | 8 | Padrón continuo (población 18–34) | INE | Complementaria — impacto humano |
 
-El alquiler procede del **SERPAVI** (precios reales declarados, no de oferta) y el salario joven de la **AEAT a escala provincial**; ambas comparten naturaleza fiscal. El universo son las 48 provincias de régimen común (se excluyen los territorios forales, que las fuentes tributarias no cubren de forma homogénea, sin imputar).
+El alquiler procede del **SERPAVI** (precios reales declarados, no de oferta) y el salario joven de la **AEAT a escala provincial**; ambas comparten naturaleza fiscal. El universo son las 48 unidades de régimen común (46 provincias más las ciudades autónomas de Ceuta y Melilla); se excluyen los territorios forales, que las fuentes tributarias no cubren de forma homogénea, sin imputar.
 
 ## Panel resultante
 

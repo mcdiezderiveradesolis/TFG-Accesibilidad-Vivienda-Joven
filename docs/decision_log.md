@@ -39,6 +39,12 @@ Siete fuentes oficiales + una complementaria (ver `source_inventory.md`):
 
 ## 2. Historial cronológico de decisiones
 
+### [Punto de partida] El anteproyecto y su revisión
+- **Situación inicial:** el trabajo arrancó con un anteproyecto que fijó el tema —el desequilibrio entre el precio del alquiler y el salario de la población joven— y un primer marco teórico, con una aproximación a **escala autonómica**, el alquiler tomado de portales inmobiliarios y el salario de la Encuesta de Estructura Salarial.
+- **Aprendizaje:** esa primera aproximación coincidía con el nivel del seguimiento institucional ya existente y se apoyaba en precios de oferta y supuestos frágiles, de modo que no aportaba resolución nueva ni una base reproducible.
+- **Decisión:** rediseñar el trabajo hacia un enfoque **provincial, explicativo y predictivo**, con fuentes oficiales de naturaleza fiscal y un pipeline reproducible. Las decisiones siguientes detallan ese rediseño.
+- **Estado:** Vigente.
+
 ### [Rediseño] De una base en Excel a un pipeline en Python — VIGENTE
 - **Situación inicial:** base previa construida principalmente en Excel.
 - **Problema:** dependía en exceso de fórmulas en hojas, con escasa trazabilidad y riesgo de errores de arrastre (se detectó, por ejemplo, una fórmula de esfuerzo arrastrada con una referencia absoluta de alquiler).
@@ -88,6 +94,30 @@ Siete fuentes oficiales + una complementaria (ver `source_inventory.md`):
 - **Decisión:** descartar las tablas IPVA del INE (índice de precios de la vivienda en alquiler) y el subcomponente de alquiler del IPC como predictores, por **riesgo de circularidad** con la variable dependiente.
 - **Estado:** Vigente.
 
+### [Modelado supervisado] Competición de modelos: el dato elige el método — VIGENTE
+- **Decisión:** comparar un modelo base regularizado (**Ridge**) con dos avanzados de árboles (**Random Forest** y **Gradient Boosting**) bajo validación temporal; **gana Ridge** por su mejor ajuste fuera de muestra.
+- **Justificación:** en un panel pequeño y con tendencia, el modelo lineal regularizado generaliza mejor que los de árboles, que quedan limitados por el techo de extrapolación. El dato gobierna la elección del método, no al revés.
+- **Estado:** Vigente.
+
+### [Inferencia] Efectos fijos provinciales y diagnóstico de colinealidad — VIGENTE
+- **Decisión:** complementar la predicción con un modelo de **efectos fijos provinciales (LSDV)** con errores estándar clusterizados por provincia, y diagnosticar la **colinealidad** (matriz de correlación y factor de inflación de la varianza).
+- **Justificación:** separa la heterogeneidad estructural de cada territorio de la dinámica temporal y obliga a leer las variables salariales en bloque, no una a una.
+- **Estado:** Vigente.
+
+### [No supervisado] Tipologías provinciales con K-Means (k = 3) — VIGENTE
+- **Decisión:** agrupar las 48 provincias por **nivel y tendencia** de la tasa de esfuerzo con **K-Means**, eligiendo **k = 3** por interpretabilidad (silueta casi idéntica a k = 2 pero lectura más rica) y validando la partición con un agrupamiento jerárquico independiente.
+- **Estado:** Vigente.
+
+### [Series temporales] Proyección como escenario, no como predicción — VIGENTE / SUSTITUYE al SARIMAX mensual
+- **Decisión:** proyectar la tasa de esfuerzo 2025–2027 con **ARIMA** sobre la serie diferenciada, presentada con intervalos y **como escenario**, no como predicción puntual, dada la brevedad de la serie (catorce observaciones anuales).
+- **Justificación:** al ser un dato anual no procede un componente estacional, por lo que se descarta el SARIMAX mensual de los ejemplos; también se descarta un estimador dinámico de panel (Arellano-Bond) por el tamaño reducido del panel.
+- **Estado:** Vigente.
+
+### [Análisis de Negocio] Interpretar, no re-explicar; matriz de decisión — VIGENTE
+- **Decisión:** el pilar de negocio **traduce** los resultados del Análisis del Dato en decisiones de consultoría y política pública **sin reabrir la técnica**. Su aportación diferencial es una **matriz provincial** que distingue la **tensión estructural** (esfuerzo explicado por los fundamentales) de la **tensión residual** (precio por encima de los fundamentales, planteada como hipótesis), cada una con su palanca, y unas recomendaciones **tipificadas** (inmediata, estratégica, técnica y futura).
+- **Justificación:** responde a la modalidad de consultoría del TFG; se descarta de forma consciente un plan de negocio o lienzo de modelo, que no corresponde a este pilar.
+- **Estado:** Vigente.
+
 ---
 
 ## 3. Estado actual del proyecto
@@ -95,8 +125,8 @@ Siete fuentes oficiales + una complementaria (ver `source_inventory.md`):
 ### Completado
 - Rediseño del pipeline y migración a Python/Colab.
 - **Pilar de Ingeniería del Dato:** panel principal 672×30, paneles auxiliares (2.016 y 576), auditoría final, memoria de la entrega. ✅
+- **Pilar de Análisis del Dato:** competición supervisada (Ridge vs Random Forest y Gradient Boosting, gana Ridge), inferencia por efectos fijos provinciales (LSDV), tipologías con K-Means (k = 3) y escenario 2025–2027 con ARIMA; memoria de la entrega. ✅
+- **Pilar de Análisis de Negocio:** interpretación de los resultados en clave de negocio y de política pública, con conclusiones y recomendaciones tipificadas; memoria de la entrega. ✅
 
 ### Pendiente
-- Pilar de Análisis del Dato (modelado explicativo, agrupación y predicción).
-- Pilar de Análisis de Negocio.
-- Memoria completa (≈ 50 páginas).
+- Memoria completa (≈ 50 páginas) que integra los tres pilares.
