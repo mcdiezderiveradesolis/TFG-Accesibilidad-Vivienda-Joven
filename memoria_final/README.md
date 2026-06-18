@@ -2,7 +2,7 @@
 
 Cuarta entrega del TFG: la **memoria completa** que integra los tres pilares (Ingeniería del Dato, Análisis del Dato y Análisis de Negocio) en un único documento. Se evalúa como apto/no apto.
 
-> ✅ **Completada.** Versión final verificada.
+> **Completada.** Versión final verificada.
 
 ## Contenido
 
