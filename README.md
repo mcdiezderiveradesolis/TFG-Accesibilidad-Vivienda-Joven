@@ -14,11 +14,11 @@ El TFG se compone de **cuatro entregas**: los tres pilares con nota y, después,
 
 | Carpeta | Contenido | Estado |
 |---|---|---|
-| [`1_Ingenieria_del_Dato/`](1_Ingenieria_del_Dato/) | Construcción del panel provincial integrado y reproducible | ✅ Completada |
-| [`2_Analisis_del_Dato/`](2_Analisis_del_Dato/) | Modelado explicativo, agrupación y predicción | ✅ Completada |
-| [`3_Analisis_de_Negocio/`](3_Analisis_de_Negocio/) | Lectura de negocio e implicaciones | ✅ Completada |
-| [`memoria_final/`](memoria_final/) | Memoria completa que integra los tres pilares | ✅ Completada |
-| [`docs/`](docs/) | Documentación metodológica: historial de decisiones, diccionario de variables e inventario de fuentes | ✅ Actualizada |
+| [`1_Ingenieria_del_Dato/`](1_Ingenieria_del_Dato/) | Construcción del panel provincial integrado y reproducible | Completada |
+| [`2_Analisis_del_Dato/`](2_Analisis_del_Dato/) | Modelado explicativo, agrupación y predicción | Completada |
+| [`3_Analisis_de_Negocio/`](3_Analisis_de_Negocio/) | Lectura de negocio e implicaciones | Completada |
+| [`memoria_final/`](memoria_final/) | Memoria completa que integra los tres pilares | Completada |
+| [`docs/`](docs/) | Documentación metodológica: historial de decisiones, diccionario de variables e inventario de fuentes | Actualizada |
 
 Dentro de cada carpeta de entrega se mantiene la misma organización (`notebooks/`, `data/` con `raw` y `clean`, `figuras/` y `memoria/`); el pilar de Análisis de Negocio, al ser de redacción y no incorporar cuaderno ni datos propios, incluye `memoria/` y `tablas/` (tres tablas de elaboración propia: síntesis de objetivos, matriz de decisión 2×2 y ficha del producto).
 
