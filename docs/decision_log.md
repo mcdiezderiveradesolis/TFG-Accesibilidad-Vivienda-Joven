@@ -124,9 +124,7 @@ Siete fuentes oficiales + una complementaria (ver `source_inventory.md`):
 
 ### Completado
 - Rediseño del pipeline y migración a Python/Colab.
-- **Pilar de Ingeniería del Dato:** panel principal 672×30, paneles auxiliares (2.016 y 576), auditoría final, memoria de la entrega. ✅
-- **Pilar de Análisis del Dato:** competición supervisada (Ridge vs Random Forest y Gradient Boosting, gana Ridge), inferencia por efectos fijos provinciales (LSDV), tipologías con K-Means (k = 3) y escenario 2025–2027 con ARIMA; memoria de la entrega. ✅
-- **Pilar de Análisis de Negocio:** interpretación de los resultados en clave de negocio y de política pública, con conclusiones y recomendaciones tipificadas; memoria de la entrega. ✅
-
-### Pendiente
-- Memoria completa (≈ 50 páginas) que integra los tres pilares.
+- **Pilar de Ingeniería del Dato:** panel principal 672×30, paneles auxiliares (2.016 y 576), auditoría final, memoria de la entrega. 
+- **Pilar de Análisis del Dato:** competición supervisada (Ridge vs Random Forest y Gradient Boosting, gana Ridge), inferencia por efectos fijos provinciales (LSDV), tipologías con K-Means (k = 3) y escenario 2025–2027 con ARIMA; memoria de la entrega. 
+- **Pilar de Análisis de Negocio:** interpretación de los resultados en clave de negocio y de política pública, con conclusiones y recomendaciones tipificadas; memoria de la entrega. 
+> Memoria completa (≈ 50 páginas) que integra los tres pilares.
